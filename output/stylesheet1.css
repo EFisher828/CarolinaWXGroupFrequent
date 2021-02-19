@@ -1,3 +1,4 @@
+body {margin:0%}
 h4 {
 	text-align: center;
 	font-family: Verdana;
@@ -13,7 +14,7 @@ h4 {
 }
 #header {
 	background-color: rgb(0, 100, 255);
-	height: 33%;
+	height: 28%;
 	margin: 0%;
 }
 #mainbodydivhome {
