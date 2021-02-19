@@ -7,19 +7,21 @@
 <body>
 	<div id='header'>
 		<!-- <h1 id='headertext'>Welcome to the Carolina Weather Syndicate</h1> -->
-		<img class="headerimg" style="padding-top:1.8%;width:25%;height:auto;" src="cropped-logo.png" />
+		<a href="index.html"><img class="headerimg" style="padding-top:1.8%;width:25%;height:auto;" src="cropped-logo.png" /></a>
 		<h4 class="headertext">"Amazing testimonial that makes us look good" - Jane Doe</h4>
 	</div>
 	<div id='mainbodydivhome'>
+		<div class="nav">
 		<ul class="nav">
-  			<li><a href="index.html">Home</a></li>
-  			<li><a href="livenet.html">Carolina Weather Net</a></li>
-  			<li><a class="active" href="podcasts.html">Podcasts</a></li>
-   			<li><a href="currentwx.html">Current Weather</a></li>
-  			<li><a href="get-involved.html">Get Involved</a></li>
-  			<li><a href="partnerships.html">Partner With Us</a></li>
-  			<li><a href="about.html">About</a></li>
+  			<li class="lift"><a href="index.html">Home</a></li>
+  			<li class="lift"><a href="livenet.html">Carolina Weather Net</a></li>
+  			<li class="lift"><a class="active" href="podcasts.html">Podcasts</a></li>
+   			<li class="lift"><a href="currentwx.html">Current Weather</a></li>
+  			<li class="lift"><a href="get-involved.html">Get Involved</a></li>
+  			<li class="lift"><a href="partnerships.html">Partner With Us</a></li>
+  			<li class="lift"><a href="about.html">About</a></li>
 		</ul>
+		</div>
 	<br /><br /><br /><br /><br />
 	<div align="center">
 		<h2 id="podinfo">Weekly Podcasts</h2>
@@ -27,19 +29,20 @@
 	</div>
 	<table align="center" style="padding-top:4%;">
 		<tr>
-			<td  style="padding-bottom: 4%;" id="podtabletds"><button style="background-color: rgb(255, 0, 0);" id="podtablebuttons" onclick="location.href='https://www.youtube.com/carolinawxgroup';">YouTube</button></td>
-			<td  style="padding-bottom: 4%;" id="podtabletds"><button style="background-color: rgb(4, 95, 241);" id="podtablebuttons" onclick="location.href='https://anchor.fm/carolinaweather';">AnchorFM</button></td>
+			<td  style="padding-bottom: 4%;" id="podtabletds"><button style="background-color: rgb(255, 0, 0);" id="podtablebuttons" onclick="window.open('https://www.youtube.com/carolinawxgroup','_blank')"><u>YouTube</u></button></td>
+			<td  style="padding-bottom: 4%;" id="podtabletds"><button style="background-color: rgb(4, 95, 241);" id="podtablebuttons" onclick="window.open('https://anchor.fm/carolinaweather','_blank')"><u>AnchorFM</u></button></td>
 		</tr>
 		<tr>
-			<td id="podtabletds"><button style="background-color: rgb(29, 185, 84);" id="podtablebuttons" onclick="location.href='https://open.spotify.com/show/2TqHCIzSNI2nv7Nx4J9YjF';">Spotify</button></td>
-			<td id="podtabletds"><button style="background-color: rgb(142, 55, 198);" id="podtablebuttons" onclick="location.href='https://podcasts.apple.com/us/podcast/carolina-weather-group/id1171267791';">Apple Podcasts</button></td>
+			<td id="podtabletds"><button style="background-color: rgb(29, 185, 84);" id="podtablebuttons" onclick="window.open('https://open.spotify.com/show/2TqHCIzSNI2nv7Nx4J9YjF','_blank')"><u>Spotify</u></button></td>
+			<td id="podtabletds"><button style="background-color: rgb(142, 55, 198);" id="podtablebuttons" onclick="window.open('https://podcasts.apple.com/us/podcast/carolina-weather-group/id1171267791','_blank')"><u>Apple Podcasts</u></button></td>
 		</tr>
 	</table>
 	<div align="center">
 		<p id="podinfo" style="width: 60%;height: auto;padding-top: 4%;">If you don't want to sort through years of episodes to find the ones you're most interested in, consider streamlining the process with our YouTube playlists! We've covered the entire gammit of weather topics in our 300+ episodes, here's a list of our most frequently discussed topics:</p>
 	</div>
 	<br /><br />
-	<table width=90% align="center" style="border: 1px solid black;padding: 2%;">
+	<div align="center">
+	<table width=80% style="border: 1px solid black;padding: 2%;text-align: center;">
 		<tr>
 			<td style="padding-bottom: 4%;" id="podtabletds"><a id="playlista" href="https://youtube.com/playlist?list=PLmpTWSmBkt-w1LffG95qbV4tX5eWiWYuq">The National Weather Service/NOAA</a></td>
 			<td style="padding-bottom: 4%;" id="podtabletds"><a id="playlista" href="https://youtube.com/playlist?list=PLmpTWSmBkt-ykyVXBp9A0F1LcYzQZftjY">Space Weather</a></td>
@@ -48,9 +51,10 @@
 		<tr>
 			<td id="podtabletds"><a id="playlista" href="https://youtube.com/playlist?list=PLmpTWSmBkt-yyP8Ao6iwAJtYiMJtKR6Z8">Getting to Know Mets</a></td>
 			<td id="podtabletds"><a id="playlista" href="https://youtube.com/playlist?list=PLmpTWSmBkt-z8-ZK0SYleOUSYJVg5AQVh">Emergency Management</a></td>
-			<td id="podtabletds"><a id="playlista" href="https://youtube.com/playlist?list=PLmpTWSmBkt-z4xbdzNywKS85wrTP37PEL">General Awesomeness</a></td>
+			<td id="podtabletds"><a id="playlista" href="https://youtube.com/playlist?list=PLmpTWSmBkt-xlGhOhNrTuI2Vq8BuIOZ-P">Editor's Picks</a></td>
 		</tr>
 	</table>
+	</div>
 	<div align="center">
 		<h2 id="podinfo" style="width: 60%;height: auto;padding-top: 4%;">Our Most Recent Shows</h2>
 	</div>
@@ -59,48 +63,48 @@
 		<tr>
 			<td>
 				<div align="center" style="padding-top: 1%;">
-					<iframe class="latestVideoEmbed" vnum='0' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+					<iframe class="latestVideoEmbed" vnum='0' cid="UCmhGiYbMDccQcdSjpf87nGg" width="60%" height="27.85%" frameborder="0" allowfullscreen></iframe>
 				</div>			
 			</td>
 			<td>
 				<div align="center" style="padding-top: 1%;">
-					<iframe class="latestVideoEmbed" vnum='1' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+					<iframe class="latestVideoEmbed" vnum='1' cid="UCmhGiYbMDccQcdSjpf87nGg" width="60%" height="27.85%" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				<div align="center" style="padding-top: 1%;">
-					<iframe class="latestVideoEmbed" vnum='2' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+					<iframe class="latestVideoEmbed" vnum='2' cid="UCmhGiYbMDccQcdSjpf87nGg" width="60%" height="27.85%" frameborder="0" allowfullscreen></iframe>
 				</div>			
 			</td>
 			<td>
 				<div align="center" style="padding-top: 1%;">
-					<iframe class="latestVideoEmbed" vnum='3' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+					<iframe class="latestVideoEmbed" vnum='3' cid="UCmhGiYbMDccQcdSjpf87nGg" width="60%" height="27.85%" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				<div align="center" style="padding-top: 1%;">
-					<iframe class="latestVideoEmbed" vnum='4' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+					<iframe class="latestVideoEmbed" vnum='4' cid="UCmhGiYbMDccQcdSjpf87nGg" width="60%" height="27.85%" frameborder="0" allowfullscreen></iframe>
 				</div>			
 			</td>
 			<td>
 				<div align="center" style="padding-top: 1%;">
-					<iframe class="latestVideoEmbed" vnum='5' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+					<iframe class="latestVideoEmbed" vnum='5' cid="UCmhGiYbMDccQcdSjpf87nGg" width="60%" height="27.85%" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</td>
 		</tr>
 		<tr>
 			<td>
 				<div align="center" style="padding-top: 1%;">
-					<iframe class="latestVideoEmbed" vnum='6' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+					<iframe class="latestVideoEmbed" vnum='6' cid="UCmhGiYbMDccQcdSjpf87nGg" width="60%" height="27.85%" frameborder="0" allowfullscreen></iframe>
 				</div>			
 			</td>
 			<td>
 				<div align="center" style="padding-top: 1%;">
-					<iframe class="latestVideoEmbed" vnum='7' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+					<iframe class="latestVideoEmbed" vnum='7' cid="UCmhGiYbMDccQcdSjpf87nGg" width="60%" height="27.85%" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</td>
 		</tr>
