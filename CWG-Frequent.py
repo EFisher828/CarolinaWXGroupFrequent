@@ -1,6 +1,5 @@
 import numpy as np
 import math
-import shapefile
 import urllib.request
 import matplotlib.pyplot as plt
 import matplotlib.patheffects as pe
@@ -9,7 +8,9 @@ from matplotlib.patches import PathPatch
 from matplotlib.collections import LineCollection
 from matplotlib import cm
 from bs4 import BeautifulSoup
-from datetime import datetime
+import shapefile as shp
+import datetime
+from datetime import datetime as dt
 
 def wnctemp():
 
@@ -243,7 +244,7 @@ def wnctemp():
                 plt.text(v-2.8 , i-0.1, str(v), color='white', fontsize='13')
         plt.title('Northern/Central Mountains, NC\nVertical Temperature Profile', **font2)
 
-        now = datetime.now()
+        now = datetime.datetime.now()
         current_time = now.strftime("%I:%M %p")
         plt.text(-0.27,-0.12,"Source: NCSCO",color='white',size=16,horizontalalignment='center',verticalalignment='center',transform = ax.transAxes)
         plt.text(-0.27,1.05,"Valid: " + current_time,color='white',size=16,horizontalalignment='center',verticalalignment='center',transform = ax.transAxes)
@@ -403,8 +404,9 @@ def wnchumidity():
         Dew_8 = Dew_7.split(' ')
         Dew_9 = str(Dew_8[1])
         Dewpoint = eval(Dew_9)
-        Temperature.append(Dewpoint)
-        barnames.append(names[i])
+        if Dewpoint > 2:
+            Temperature.append(Dewpoint)
+            barnames.append(names[i])
         i = i + 1
 
     except:
@@ -492,7 +494,7 @@ def wnchumidity():
                 plt.text(v-2.8 , i-0.1, str(v), color='white', fontsize='13')
         plt.title('Northern/Central Mountains, NC\nVertical Relative Humidity Profile', **font2)
 
-        now = datetime.now()
+        now = datetime.datetime.now()
         current_time = now.strftime("%I:%M %p")
         #plt.text(0.87,0.94,current_time,color='white',size=18,horizontalalignment='center',verticalalignment='center',transform = ax.transAxes)
         plt.text(-0.27,-0.12,"Source: NCSCO",color='white',size=16,horizontalalignment='center',verticalalignment='center',transform = ax.transAxes)
@@ -737,7 +739,7 @@ def swnctemp():
                 plt.text(v-2.8 , i-0.1, str(v), color='white', fontsize='13')
         plt.title('Southwestern Mountains, NC\nVertical Relative Humidity Profile', **font2)
 
-        now = datetime.now()
+        now = datetime.datetime.now()
         current_time = now.strftime("%I:%M %p")
         #plt.text(0.87,0.94,current_time,color='white',size=18,horizontalalignment='center',verticalalignment='center',transform = ax.transAxes)
         plt.text(-0.27,-0.12,"Source: NCSCO",color='white',size=16,horizontalalignment='center',verticalalignment='center',transform = ax.transAxes)
@@ -988,7 +990,7 @@ def swnchumidity():
                 plt.text(v-2.8 , i-0.1, str(v), color='white', fontsize='13')
         plt.title('Southwestern Mountains, NC\nVertical Relative Humidity Profile', **font2)
 
-        now = datetime.now()
+        now = datetime.datetime.now()
         current_time = now.strftime("%I:%M %p")
         #plt.text(0.87,0.94,current_time,color='white',size=18,horizontalalignment='center',verticalalignment='center',transform = ax.transAxes)
         plt.text(-0.27,-0.12,"Source: NCSCO",color='white',size=16,horizontalalignment='center',verticalalignment='center',transform = ax.transAxes)
@@ -1096,7 +1098,7 @@ def ncscmap():
                             Table = str(soup.find('table', {"class":"StationDetails"}).find_all('tr'))
                             Tr = Table.split(',')                
                             cord_1 = str(Tr[12])
-                            print(cord_1)
+                            #print(cord_1)
                             cord_2 = cord_1.split('</strong>')
                             lat_1 = str(cord_2[1])
                             lat_2 = lat_1.split('°')
@@ -1166,9 +1168,9 @@ def ncscmap():
                     
         except:
             print(" missing and very broken")
-        print(url[-4:] + Wind_Sum + ' ' + str(lat) + ' ' + str(lon) + ' ' + str(Temperature) + ' ' + str(Dewpoint))
-        print(len(Latitude))
-        print(len(plotdata))
+        #print(url[-4:] + Wind_Sum + ' ' + str(lat) + ' ' + str(lon) + ' ' + str(Temperature) + ' ' + str(Dewpoint))
+        #print(len(Latitude))
+        #print(len(plotdata))
 
     for i in Wind:
         temp_wind = str(Wind[q])
