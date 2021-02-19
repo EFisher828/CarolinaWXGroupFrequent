@@ -1,0 +1,149 @@
+h4 {
+	text-align: center;
+	font-family: Verdana;
+	color: white;
+	font-weight: bold;
+	font-size: 140%;
+}
+#currentmain {
+	height: auto;
+	width: 75%;
+	padding-top: 0%;
+	margin: auto;
+}
+#header {
+	background-color: rgb(0, 100, 255);
+	height: 24%;
+	margin: 0%;
+}
+#mainbodydivhome {
+	height: 250%;
+	margin: 0%;
+	padding: 0%;
+}
+#mainbodydivlivenet {
+	height: 130%;
+	margin: 0%;
+	padding: 0%;
+}
+#mainbodydivpodcasts {
+	height: 130%;
+	margin: 0%;
+	padding: 0%;
+}
+#forecastslides {
+	height: auto;
+	width: 75%;
+	padding-top: 6%;
+	margin: auto;
+}
+#aboutslides {
+	height: auto;
+	width: 50%;
+	padding-top: 2%;
+	margin: auto;
+}
+#ytsub {
+	border: none;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	width: 20%;
+	height: 2.5%;
+	background-color: rgb(11, 102, 193);
+	border-radius: 0%;
+}
+#centerp {
+	font-family: Verdana;
+	text-align: center;
+	font-weight: bold;
+}
+#podinfo {
+	font-family: Verdana;
+	text-align: center;
+}
+#podtabletds{
+	width: 20%;
+	text-align: center;
+	font-size: 150%;
+	font-family: Verdana;
+	weight: bold;
+}
+#podtabletds2{
+	width: 20%;
+	padding-bottom: 15%;
+	text-align: center;
+	font-size: 150%;
+	font-family: Verdana;
+	weight: bold;
+}
+#podtablebuttons{
+	border: none;
+	color: white;
+	font-size: 150%;
+	padding: 2%;
+	text-align: center;
+	display: inline-block;
+	width: 80%;
+	height: 8%;
+	border-radius: 0%;
+}
+#playlista {
+	font-family: Verdana;
+	color: black;
+}
+.mySlides {
+	display:none;
+}
+.active {
+  	background-color: #333;
+}
+body {
+	margin: 0%;
+	padding: 0%;
+}
+img{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+iframe {
+	margin-left: auto;
+	margin-right: auto;
+}
+ul {
+	font-family: Verdana;
+  	list-style-type: none;
+  	margin: 0%;
+  	overflow: hidden;
+  	background-color: rgb(11, 102, 193);
+  	position: absolute;
+  	width: 100%;
+}
+li a {
+  	display: block;
+  	color: white;
+  	text-align: center;
+  	padding: 14px 16px;
+ 	text-decoration: none;
+}
+li a:hover:not(.active) {
+  	background-color: #111;
+}
+.nav{
+    list-style:none;
+    margin:0%;
+    padding:0%;
+    text-align:center;
+}
+.nav li{
+    display:inline;
+    margin: 0%;
+    padding: 0%;
+}
+.nav a{
+    display: inline-block;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin: 0%;
+}

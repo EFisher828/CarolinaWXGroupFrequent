@@ -1,0 +1,78 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet1.css">
+</head>
+
+<body>
+	<div id='header'>
+		<!-- <h1 id='headertext'>Welcome to the Carolina Weather Syndicate</h1> -->
+		<img class="headerimg" style="padding-top:1.8%;" src="cropped-logo.png" />
+		<h4 class="headertext">"The best weather source in the Carolinas" - Uncle Billy</h4>
+	</div>
+	<div id='mainbodydivhome'>
+		<ul class="nav">
+  			<li><a class="active" href="index.html">Home</a></li>
+  			<li><a href="livenet.html">Carolina Weather Net</a></li>
+  			<li><a href="podcasts.html">Podcasts</a></li>
+   			<li><a href="currentwx.html">Current Weather</a></li>
+  			<li><a href="get-involved.html">Get Involved</a></li>
+  			<li><a href="partnerships.html">Partner With Us</a></li>
+  			<li><a href="about.html">About</a></li>
+		</ul>
+		<div id='forecastslides'>
+			<img class="mySlides" src="NWSForecastDay1.png" style="width:100%">
+  			<img class="mySlides" src="NWSForecastDay2.png" style="width:100%">
+  			<img class="mySlides" src="NWSForecastDay3.png" style="width:100%">
+		</div>
+		<br /><hr width=75%/><br />
+		<p id="centerp">Watch Our Latest Videos:</p>
+		<div align="center" style="padding-top: 1%;">
+			<iframe class="latestVideoEmbed" vnum='0' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div align="center" style="padding-top:2%;">
+			<button id="ytsub" onclick="location.href='https://www.youtube.com/carolinawxgroup';">Visit Our Channel for More!</button>
+		</div>
+		<div align="center" style="padding-top: 2%;">
+			<iframe class="latestVideoEmbed" vnum='1' cid="UCmhGiYbMDccQcdSjpf87nGg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script>
+		var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+		function loadVideo(iframe) {
+		  $.getJSON(reqURL + iframe.getAttribute('cid'),
+		    function(data) {
+		      var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+		      console.log(videoNumber);
+		      var link = data.items[videoNumber].link;
+		      id = link.substr(link.indexOf("=") + 1);
+		      iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=0");
+		    }
+		  );
+		}
+		var iframes = document.getElementsByClassName('latestVideoEmbed');
+		for (var i = 0, len = iframes.length; i < len; i++) {
+		  loadVideo(iframes[i]);
+		}
+		</script>
+	</div>
+	<script>
+		var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none"; 
+		  }
+		  slideIndex++;
+		  if (slideIndex > x.length) {slideIndex = 1} 
+		  x[slideIndex-1].style.display = "block"; 
+		  setTimeout(carousel, 3000); 
+		}
+	</script>
+</body>
+<footer>
+</footer>
+</html>

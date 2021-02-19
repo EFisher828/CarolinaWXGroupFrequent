@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet1.css">
+</head>
+
+<body>
+	<div id='header'>
+		<!-- <h1 id='headertext'>Welcome to the Carolina Weather Syndicate</h1> -->
+		<img class="headerimg" style="padding-top:1.8%;" src="cropped-logo.png" />
+		<h4 class="headertext">"The best weather source in the Carolinas" - Uncle Billy</h4>
+	</div>
+	<div id='mainbodydivhome'>
+		<ul class="nav">
+  			<li><a href="index.html">Home</a></li>
+  			<li><a href="livenet.html">Carolina Weather Net</a></li>
+  			<li><a href="podcasts.html">Podcasts</a></li>
+   			<li><a href="currentwx.html">Current Weather</a></li>
+  			<li><a href="get-involved.html">Get Involved</a></li>
+  			<li><a href="partnerships.html">Partner With Us</a></li>
+  			<li><a class="active" href="about.html">About</a></li>
+		</ul>
+	<br /><br /><br /><br /><br />
+	<div align="center">
+		<h2 id="podinfo">About Us</h2>
+		<div id='aboutslides'>
+			<img class="mySlides" src="show/Show-1.jpg" style="width:100%">
+  			<img class="mySlides" src="show/Show-2.JPG" style="width:100%">
+  			<img class="mySlides" src="show/Show-3.jpg" style="width:100%">
+ 			<img class="mySlides" src="show/Show-4.jpg" style="width:100%">
+  			<img class="mySlides" src="show/Show-5.JPG" style="width:100%">
+  			<img class="mySlides" src="show/Show-6.JPG" style="width:100%">
+  			<img class="mySlides" src="show/Show-7.JPG" style="width:100%">
+  			<img class="mySlides" src="show/Show-8.JPG" style="width:100%">
+   			<img class="mySlides" src="show/Show-9.png" style="width:100%">
+   			<img class="mySlides" src="show/Show-10.jpeg" style="width:100%">
+		</div>
+		<br />
+		<p id="podinfo" style="width: 45%;height: auto;">Carolina Weather Group, LLC has provided quality weather forecasts, educational materials, and live severe weather coverage for the Carolinas since 2013. In that time, we've seen more than a dozen tropical cyclones, hundreds of tornadoes, and nearly every other form of extreme weather. We're currently nine members strong, with proffesionals in various private sector forecasting, broadcast, and academic positions. You can trust us to cover every weather event that may spoil your afternoon or threaten your life. For more information on our members, check out the individual bios below.</p>
+	</div>
+	<br /><hr width=75%/><br />
+	<table width=90% align="center">
+		<tr>
+			<td id="podtabletds2">Insert Scotty Here</td>
+			<td id="podtabletds2">Insert James Here</td>
+			<td id="podtabletds2">Insert Shea Here</td>
+		</tr>
+		<tr>
+			<td id="podtabletds2">Insert Jordan Here</td>
+			<td id="podtabletds2">Insert Evan Here</td>
+			<td id="podtabletds2">Insert Frank Here</td>
+		</tr>
+		<tr>
+			<td id="podtabletds2">Insert Zach Here</td>
+			<td id="podtabletds2">Insert Dan Here</td>
+			<td id="podtabletds2">Insert Ricky Here</td>
+		</tr>
+	</table>
+	</div>
+	<script>
+		var slideIndex = 0;
+		carousel();
+
+		function carousel() {
+		  var i;
+		  var x = document.getElementsByClassName("mySlides");
+		  for (i = 0; i < x.length; i++) {
+		    x[i].style.display = "none"; 
+		  }
+		  slideIndex++;
+		  if (slideIndex > x.length) {slideIndex = 1} 
+		  x[slideIndex-1].style.display = "block"; 
+		  setTimeout(carousel, 3000); 
+		}
+	</script>
+</body>
+</html>
