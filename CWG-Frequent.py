@@ -462,7 +462,7 @@ def wnchumidity():
 
     #color
         color_1 = np.array(height)
-        color_2 = cm.YlGn((color_1 / float(max(color_1))))
+        color_2 = cm.YlGn((color_1 / 100))
         ax.xaxis.label.set_color('white')
         ax.spines['bottom'].set_color('white')
         ax.spines['top'].set_color('white') 
@@ -958,7 +958,7 @@ def swnchumidity():
 
     #color
         color_1 = np.array(height)
-        color_2 = cm.YlGn((color_1 / float(max(color_1))))
+        color_2 = cm.YlGn((color_1 / 100))
         ax.xaxis.label.set_color('white')
         ax.spines['bottom'].set_color('white')
         ax.spines['top'].set_color('white') 
